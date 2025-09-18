@@ -58,3 +58,11 @@ with otherCharts:
 
 with maps:
     st.subheader("Maps")
+    fig4 = px.scatter_mapbox(df,
+                             lat="Latitude",
+                             lon="Longitude",
+                             zoom=17,
+                             mapbox_style="open-street-map",
+                             hover_data=df,
+                             color="Temperature (c)",)
+    st.plotly_chart(fig4)
